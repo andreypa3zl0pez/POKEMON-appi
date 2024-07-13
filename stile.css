@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('pokemon_10.webp'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: #ffcc00; 
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #ffffff; 
+  background-color: #00539f; 
+  padding: 10px 20px; 
+  border-radius: 8px; 
+  display: inline-block; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: 2px solid #ffcc00; 
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  position: relative;
+  background-image: url('pokeball.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  border-radius: 50%; 
+}
+
+.card-content {
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.card:hover .card-content {
+  opacity: 1;
+}
+
+.card img:hover {
+  opacity: 0.5; 
+}
+
+.card h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #3b4cca; 
+}
+
+.card p {
+  margin: 5px 0;
+  color: #666666; 
+}
+
+@media (max-width: 600px) {
+  #pokemon-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin: 10px 0;
+  }
+}
